@@ -13,7 +13,18 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <h3>
+                    Right/Wrong 
+                </h3>
+                <div id="right">
+
+                </div><br>
+                <div id="wrong">
+
+                </div>
+
+            </div>
             <div class="col-lg-4">
                 <div class="jumbotron">
                     <h1 class="Gtitle">
@@ -51,5 +62,7 @@
 </body>
 <script type="text/javascript" src="assets/javascript/app.js">
     document.getElementById("hn").innerHTML = "This is the superhero name "+hero;
+    document.getElementById("right").innerHTML = correct;
+    document.getElementById("wrong").innerHTML = wrong;
 </script>
 </html>

@@ -4,3 +4,7 @@ body {
     line-height: 34px;
     background: url("../images/Superheroes-shadow-background-image_Grey.jpg");
   }
+
+.btn {
+    margin-top: 30 px;
+  }

@@ -26,8 +26,9 @@ function quiz (array) {
         
         answerarray = array[i].possibleans;
         for (var i = 0; i < answerarray.length; i++) {
-            var answers = $("<div>");
-            answers.addClass("answerClass btn")
+            var answers = $("<button>");
+            answers.addClass("answerClass");
+            answers.addClass("btn");
             answers.html(answerarray[i]);
             console.log("answers variable  "+answers);
             console.log("answer array  "+answerarray[i]);
@@ -44,7 +45,7 @@ function quiz (array) {
 
         //click function to select answer and outcomes
         $(".answerClass").on("click", function () {
-            //grab array position from user guess
+            //grab value from user guess
             guess = parseInt($(this).attr("anser-val"));
             console.log("user guess's  "+guess);
             //correct guess or wrong guess outcomes
