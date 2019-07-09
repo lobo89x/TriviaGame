@@ -20,6 +20,8 @@ function quiz (array) {
         // var hero = $("<button>");
         questionBlock.addClass("quiz");
         var hero = array[i].HeroName;
+        var real = array[i].correctans;
+        console.log("This is the real name  "+real);
         // hero.text(array[i].HeroName);
         
         answerarray = array[i].possibleans;
@@ -40,24 +42,24 @@ function quiz (array) {
 
 
 
-        // //click function to select answer and outcomes
-        // $(".answerClass").on("click", function () {
-        //     //grab array position from user guess
-        //     guess = parseInt($(this).attr("data-guessvalue"));
-
-        //     //correct guess or wrong guess outcomes
-        //     if (guess === array[i].correctans) {
-        //         stop();
-        //         correct++;
-        //         guess="";
-        //         $("#quizblock").html("<p>Correct!</p>");
-        //     } else {
-        //         stop();
-        //         wrong++;
-        //         guess="";
-        //         $("#quizblock").html("<p>Wrong! The correct answer is: " + array[i].correctans + "</p>");
-        //     }
-        // })
+        //click function to select answer and outcomes
+        $(".answerClass").on("click", function () {
+            //grab array position from user guess
+            guess = parseInt($(this).attr("anser-val"));
+            console.log("user guess's  "+guess);
+            //correct guess or wrong guess outcomes
+            if (guess === real) {
+                stop();
+                correct++;
+                guess="";
+                $("#quizblock").html("<p>Correct!</p>");
+            } else {
+                stop();
+                wrong++;
+                guess="";
+                $("#quizblock").html("<p>Wrong! The correct answer is: " + real + "</p>");
+            }
+        })
         }
 return $("#hn").html("<h2>" + hero + "</h2>");
       
